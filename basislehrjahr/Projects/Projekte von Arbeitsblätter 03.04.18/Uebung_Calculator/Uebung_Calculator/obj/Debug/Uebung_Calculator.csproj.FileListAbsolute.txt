@@ -1,0 +1,10 @@
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\bin\Debug\Uebung_Calculator.exe.config
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\bin\Debug\Uebung_Calculator.exe
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\bin\Debug\Uebung_Calculator.pdb
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\obj\Debug\Uebung_Calculator.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\obj\Debug\Uebung_Calculator.frmCalculator.resources
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\obj\Debug\Uebung_Calculator.Properties.Resources.resources
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\obj\Debug\Uebung_Calculator.csproj.GenerateResource.cache
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\obj\Debug\Uebung_Calculator.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\obj\Debug\Uebung_Calculator.exe
+D:\Visual Studio\Projekte von Arbeitsblätter 03.04.18\Uebung_Calculator\Uebung_Calculator\obj\Debug\Uebung_Calculator.pdb

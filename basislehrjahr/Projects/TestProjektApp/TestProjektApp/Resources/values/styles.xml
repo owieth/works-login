@@ -1,0 +1,13 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+  <style name="MeineFarben" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/meinGelb</item>
+        <item name="android:textColorPrimary">@color/meinOrange</item>
+        <item name="android:colorAccent">@color/meinOrange</item>
+    </style>
+</resources>

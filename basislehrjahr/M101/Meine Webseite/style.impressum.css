@@ -1,0 +1,57 @@
+@import url('https://fonts.google.com/?selection.family=Titillium+Web');
+.active{
+    background-color: darkcyan;
+}
+
+html {
+    background-image: url(impressum.jpg);
+}
+
+nav {
+    display: flex;  /* Von dieser Zeile an kopiert von Sebastian Berchtold */
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Bis zu dieser Zeile kopiert von Sebastian Berchtold */
+    background-color: none;
+    font-family: "Arial Black", sans-serif;
+    font-size: 1.5em;
+}
+
+h1 {
+    color: white;
+    font-family: "Arial Black", sans-serif;
+    margin: 40px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    background-color: darkcyan;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding-top: 550px;
+    font-family: "Arial Black", sans-serif;
+    font-size: 2em;
+}
+
+ul {
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    display: flex;
+    text-align: left;
+    margin: auto;
+    justify-content: left;
+    flex-direction: column;
+    background-color:  none;
+    padding-left: 45px;
+    padding-right: 45px;
+}

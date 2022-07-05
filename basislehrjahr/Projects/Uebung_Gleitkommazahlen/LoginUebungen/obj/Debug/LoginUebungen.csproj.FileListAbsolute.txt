@@ -1,0 +1,7 @@
+C:\Users\olivier.winkler\source\repos\LoginUebungen\LoginUebungen\bin\Debug\LoginUebungen.exe.config
+C:\Users\olivier.winkler\source\repos\LoginUebungen\LoginUebungen\bin\Debug\LoginUebungen.exe
+C:\Users\olivier.winkler\source\repos\LoginUebungen\LoginUebungen\bin\Debug\LoginUebungen.pdb
+C:\Users\olivier.winkler\source\repos\LoginUebungen\LoginUebungen\obj\Debug\LoginUebungen.csprojResolveAssemblyReference.cache
+C:\Users\olivier.winkler\source\repos\LoginUebungen\LoginUebungen\obj\Debug\LoginUebungen.csproj.CoreCompileInputs.cache
+C:\Users\olivier.winkler\source\repos\LoginUebungen\LoginUebungen\obj\Debug\LoginUebungen.exe
+C:\Users\olivier.winkler\source\repos\LoginUebungen\LoginUebungen\obj\Debug\LoginUebungen.pdb

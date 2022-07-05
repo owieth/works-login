@@ -1,0 +1,10 @@
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\bin\Debug\JumpAndRun.exe.config
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\bin\Debug\JumpAndRun.exe
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\bin\Debug\JumpAndRun.pdb
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\obj\Debug\JumpAndRun.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\obj\Debug\JumpAndRun.frmSpiel.resources
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\obj\Debug\JumpAndRun.Properties.Resources.resources
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\obj\Debug\JumpAndRun.csproj.GenerateResource.cache
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\obj\Debug\JumpAndRun.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\obj\Debug\JumpAndRun.exe
+D:\Visual Studio\Projekte\JumpAndRun\JumpAndRun\obj\Debug\JumpAndRun.pdb

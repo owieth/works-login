@@ -1,0 +1,9 @@
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\bin\Debug\UebungSchösch.exe.config
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\bin\Debug\UebungSchösch.exe
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\bin\Debug\UebungSchösch.pdb
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\obj\Debug\UebungSchösch.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\obj\Debug\UebungSchösch.Properties.Resources.resources
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\obj\Debug\UebungSchösch.csproj.GenerateResource.cache
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\obj\Debug\UebungSchösch.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\obj\Debug\UebungSchösch.exe
+D:\Visual Studio\Projekte\UebungSchösch\UebungSchösch\obj\Debug\UebungSchösch.pdb

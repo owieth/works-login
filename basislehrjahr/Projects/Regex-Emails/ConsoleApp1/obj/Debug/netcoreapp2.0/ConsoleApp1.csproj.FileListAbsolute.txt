@@ -1,0 +1,33 @@
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.deps.json
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.runtimeconfig.json
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.runtimeconfig.dev.json
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.dll
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.pdb
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.csprojResolveAssemblyReference.cache
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.AssemblyInfoInputs.cache
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.AssemblyInfo.cs
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.dll
+c:\users\olivier.winkler\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.pdb
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.deps.json
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.runtimeconfig.json
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.runtimeconfig.dev.json
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.dll
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.pdb
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.AssemblyInfo.cs
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.dll
+D:\Visual Studio\Visual Studio\Projekte\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.pdb
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.deps.json
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.runtimeconfig.json
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.runtimeconfig.dev.json
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.dll
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.pdb
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.AssemblyInfo.cs
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.dll
+D:\Visual Studio\Visual Studio\Projekte\Regex-Emails\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.pdb

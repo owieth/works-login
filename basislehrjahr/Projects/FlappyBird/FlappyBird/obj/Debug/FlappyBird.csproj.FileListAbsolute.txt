@@ -1,0 +1,10 @@
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\bin\Debug\FlappyBird.exe.config
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\bin\Debug\FlappyBird.exe
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\bin\Debug\FlappyBird.pdb
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\obj\Debug\FlappyBird.frmSpiel.resources
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\obj\Debug\FlappyBird.Properties.Resources.resources
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.GenerateResource.cache
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\obj\Debug\FlappyBird.exe
+D:\Visual Studio\Visual Studio\Projekte\FlappyBird\FlappyBird\obj\Debug\FlappyBird.pdb

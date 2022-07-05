@@ -1,0 +1,50 @@
+Aufgabe 1
+
+SELECT * FROM geburtstage;
+
+SELECT * FROM geburtstage
+	ID AS "Nummer";
+	
+SELECT Nachname, Vorname, Geburtsdatum FROM geburtstage;
+
+Aufgabe 2
+
+SELECT * FROM schulnoten
+	WHERE Note >= "4";
+	
+SELECT 4 FROM schulnoten
+	WHERE Note >= "4"
+	AND Note <= "5";
+	
+SELECT Prüfungsdatum, Fach, Note, Klassendurchschnitt, Bemerkungen FROM schulnoten
+	WHERE Bemerkungen LIKE "RE%" AND LIKE "WI%";
+	
+SELECT Fach, Note FROM schulnoten
+	WHERE Fach LIKE "System%";
+	
+SELECT * FROM schulnoten
+	WHERE Bemerkungen LIKE "NULL"
+	AND Note > "5";
+	
+SELECT * FROM schulnoten
+	WHERE Fach LIKE "System%"
+	AND LIKE "Deutsch";
+	
+SELECT * FROM schulnoten
+	WHERE Note > Klassendurchschnitt;
+	
+Aufgabe 3
+
+SELECT * FROM sparkonto
+	ORDER BY Datum DESC;
+	
+SELECT Transaktion FROM sparkonto
+	ORDER BY Transaktion DESC;
+	
+SELECT * FROM sparkonto
+	WHERE Datum LIKE "24.%"
+	AND LIKE "25.%";
+	
+SELECT Transaktion FROM sparkonto
+	WHERE Transaktion NOT = "Vergütung an Haus"
+	AND ORDER BY Transaktion ASC;

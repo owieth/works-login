@@ -1,0 +1,10 @@
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\bin\Debug\Panzerspiel.exe.config
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\bin\Debug\Panzerspiel.exe
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\bin\Debug\Panzerspiel.pdb
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\obj\Debug\Panzerspiel.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\obj\Debug\Panzerspiel.Properties.Resources.resources
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\obj\Debug\Panzerspiel.csproj.GenerateResource.cache
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\obj\Debug\Panzerspiel.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\obj\Debug\Panzerspiel.exe
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\obj\Debug\Panzerspiel.pdb
+D:\Visual Studio\Projekte\Panzerspiel\Panzerspiel\obj\Debug\Panzerspiel.frmSpiel.resources

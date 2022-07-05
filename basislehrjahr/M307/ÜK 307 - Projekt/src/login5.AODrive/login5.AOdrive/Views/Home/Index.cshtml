@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Ablage";
+}
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div class="col-md-12">
+    <div class="col-md-3" id="navbarLinks">
+        <ul class="navsite"><a asp-controller="Manage" asp-action="Index">AODrive - Einstellungen</a></ul>
+        <ul class="navsite2"><a asp-controller="Home" asp-action="Index">Ablage</a></ul>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <ul><a class="statusBenutzer" asp-controller="Manage" asp-action="Index">Angemeldet als @UserManager.GetUserName(User)</a></ul>
+        }
+        else
+        {
+            <ul><a asp-controller="Account" asp-action="Register">Registrierung</a></ul>
+            <ul><a asp-controller="Account" asp-action="Login">Anmeldung</a></ul>
+        }
+    </div>
+    <div class="col-md-12">
+        <!--searchbar-->
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <h3>Meine Ablage:</h3>
+            </div>
+            <div class="col-md-3">
+                <!--FileUpload-->
+                <form method="post" enctype="multipart/form-data" asp-controller="UploadFiles" asp-action="Index">
+                    <input type="file" runat="server" name="file" id="file" class="inputfile" />
+                    <label for="file">Datei hochladen</label>
+                </form>
+                <!--icon-->
+            </div>
+            <div class="col-md-3">
+                <!--FileDownload-->
+                <!--icon-->
+                <h3>Datei herunterladen</h3>
+                <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right-buttonAbmelden">
+                    <button type="submit" class="btn btn-link navbar-btn navbar-link"><img src="~/images/logout-512.png" class="imageAbmelden" /></button>
+                </form>
+            </div>
+            <div class="col-md-3"><!--searchbar--></div>
+        </div>
+        <div class="col-md-12 ablage-inhalt">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h3 class="fotos">Fotos:</h3>
+                <div><!--fotos anzeigen--></div>
+                <div class="col-md-8 fotoinhalt"></div>
+                <h3 class="videos">Videos:</h3>
+                <div><!--videos anzeigen--></div>
+                <div class="col-md-8 videoinhalt"></div>
+                <h3 class="dokumente">Dokumente:</h3><br />
+                <div><!--dokumente anzeigen--></div>
+                <div class="col-md-8 dokumentinhalt"></div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,1 @@
+delete from art where ArtID < 3;

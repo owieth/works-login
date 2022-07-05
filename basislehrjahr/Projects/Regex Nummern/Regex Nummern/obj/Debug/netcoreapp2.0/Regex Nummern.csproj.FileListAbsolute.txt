@@ -1,0 +1,11 @@
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\bin\Debug\netcoreapp2.0\Regex Nummern.deps.json
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\bin\Debug\netcoreapp2.0\Regex Nummern.runtimeconfig.json
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\bin\Debug\netcoreapp2.0\Regex Nummern.runtimeconfig.dev.json
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\bin\Debug\netcoreapp2.0\Regex Nummern.dll
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\bin\Debug\netcoreapp2.0\Regex Nummern.pdb
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\obj\Debug\netcoreapp2.0\Regex Nummern.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\obj\Debug\netcoreapp2.0\Regex Nummern.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\obj\Debug\netcoreapp2.0\Regex Nummern.AssemblyInfoInputs.cache
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\obj\Debug\netcoreapp2.0\Regex Nummern.AssemblyInfo.cs
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\obj\Debug\netcoreapp2.0\Regex Nummern.dll
+D:\Visual Studio\Visual Studio\Projekte\Regex Nummern\Regex Nummern\obj\Debug\netcoreapp2.0\Regex Nummern.pdb

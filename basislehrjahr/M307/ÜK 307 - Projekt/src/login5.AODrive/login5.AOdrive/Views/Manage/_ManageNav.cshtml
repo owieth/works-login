@@ -1,0 +1,20 @@
+﻿@using login5.AOdrive.Views.Manage
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+
+<ul class="nav nav-pills nav-stacked">
+        <div class="col-md-3" id="navbarLinks-Einstellungen">
+        <ul class="navsite"><a asp-controller="Manage" asp-action="Index">AODrive - Einstellungen</a></ul>
+        <ul class="navsite2"><a asp-controller="Home" asp-action="Index">Ablage</a></ul>
+    </div>
+    <li class="@ManageNavPages.IndexNavClass(ViewContext)"><a asp-action="Index">Mein Profil</a></li>
+    <li class="@ManageNavPages.ChangePasswordNavClass(ViewContext)"><a asp-action="ChangePassword">Mein Passwort</a></li>
+    @if (hasExternalLogins)
+    {
+        <li class="@ManageNavPages.ExternalLoginsNavClass(ViewContext)"><a asp-action="ExternalLogins">External logins</a></li>
+    }
+    <li class="@ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)"><a asp-action="TwoFactorAuthentication">AODrive - Einstellungen</a></li>
+</ul>
+

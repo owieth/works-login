@@ -1,0 +1,14 @@
+## gitignore file
+##
+
+#folders to ignore
+debug/
+release/
+bin/
+obj/
+log/
+.vs/
+
+#userfiles to ignore
+.suo
+.user

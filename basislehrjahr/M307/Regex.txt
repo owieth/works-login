@@ -1,0 +1,14 @@
+hans.mueller@gmx.ch
+hans.mueller123@gmx.ch
+gretli.keller@vtg.admin.ch
+andreasrolli@outlook.com
+xxx_da_real_n0scoper@hotmail.com
+i.am.a.gmail.address@gmail.com
+
++ --> mind. einmal
+* --> 0 oder merhmals
+-> --> ohne Mengenangabe (genau einmal)
+? --> einmal oder keinmal
+{2, 20} min. 2 Zeichen und max. 20 Zeichen
+{10} genau 10 Zeichen
+{3,} min. 3 Zeichen und unendlich Zeichen.

@@ -1,0 +1,10 @@
+D:\Visual Studio\Projekte\Snake\Snake\bin\Debug\Snake.exe.config
+D:\Visual Studio\Projekte\Snake\Snake\bin\Debug\Snake.exe
+D:\Visual Studio\Projekte\Snake\Snake\bin\Debug\Snake.pdb
+D:\Visual Studio\Projekte\Snake\Snake\obj\Debug\Snake.csprojResolveAssemblyReference.cache
+D:\Visual Studio\Projekte\Snake\Snake\obj\Debug\Snake.frmSpiel.resources
+D:\Visual Studio\Projekte\Snake\Snake\obj\Debug\Snake.Properties.Resources.resources
+D:\Visual Studio\Projekte\Snake\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
+D:\Visual Studio\Projekte\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Projekte\Snake\Snake\obj\Debug\Snake.exe
+D:\Visual Studio\Projekte\Snake\Snake\obj\Debug\Snake.pdb
