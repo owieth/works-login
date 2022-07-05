@@ -1,0 +1,5 @@
+#!groovy
+//@Library(['pipeline-helper@feature/ESTA-3206', 'esta-cloud-pipeline@feature/ESTA-3206']) _
+@Library(['pipeline-helper@feature/ESTA-3598', 'esta-cloud-pipeline@feature/ESTA-3598']) _
+
+estaCloudPipeline([:])

@@ -1,0 +1,111 @@
+#!groovy
+//@Library('pipeline-helper@feature/ESTA-3102') _
+@Library('esta-cloud-pipeline@feature/ESTA-3214-New-Notification-Mail') _
+
+pipeline {
+    agent { label 'java' }
+    tools {
+        jdk 'OpenJDK 1.8 64-Bit'
+    }
+    stages {
+        stage('Setup') {
+            steps {
+                cloud_tagDockerImage(artifactoryProject: 'estasch',
+                        ocApp: 'test-rze',
+                        tag: '0.0.15',
+                        targetTag: 'oli2',
+                        buildStage: 'prd')
+            }
+        }
+        /*
+        stage('Test cloud_buildDockerImage') {
+            steps {
+                cloud_buildDockerImage(artifactoryProject: 'estasch.docker',
+                        gitRepoUrl: 'https://code.sbb.ch/scm/kd_estasch/u203571-minical-components.git',
+                        ocApp: 'b')
+
+            }
+        }*/
+
+        stage('Test cloud_buildDockerImageSelfRunningJar') {
+            steps {
+                cloud_buildDockerImageSelfRunningJar(artifactoryProject: 'estasch',
+                        newRelicKey: '2434cec1e1b508300bb14950e5b2608a63ad55ff',
+                        newRelicAppName: 'test',
+                        pomGroupId: 'ch.sbb.esta.test',
+                        pomArtifactId: 'test-rze',
+                        pomVersion: '0.0.15',
+                        pomPackaging: 'jar',
+                        baseImageFrom: 'docker.bin.sbb.ch/cloud/sbb-base-rhel-java:8-17',
+                        port: '8888',
+                        dockerNoCache: 'true',
+                        forcePullDockerImage: 'true')
+            }
+        }
+
+        /*
+        stage('Test bin_androidBuildScan') {
+            steps {
+                script {
+                    bin_androidBuildScan(targetRepo: 'wzu.mvn',
+                            tasks: "112 932 882 -i --stacktrace",
+                            deployArtifacts: true,
+                            scanBuild: false)
+                }
+            }
+        }*/
+
+
+        stage('Test bin_mvnBuildScan') {
+            steps {
+                script {
+                    bin_mvnBuildScan(targetRepo: "estasch.mvn",
+                            additionalMavenGoals: "",
+                            deployArtifacts: false,
+                            scanBuild: false)
+                }
+            }
+        }
+/*
+        stage('Test bin_releaseAndroid') {
+            steps {
+                script {
+                    bin_releaseAndroid(
+                            targetRepo: 'datacom.mvn',
+                            tasks: "-i --stacktrace",
+                            deployArtifacts: true,
+                            scanBuild: false)
+                }
+            }
+        }*/
+
+        stage('Test bin_releaseMvnLean') {
+            steps {
+                script {
+                    def pom = bin_releaseMvn(targetRepo:"estasch.mvn",
+                            parentPom:"pom.xml",
+                            scanBuild: true)
+                }
+            }
+        }
+/*
+        stage('Test bin_releaseMvn') {
+            steps {
+                script {
+                    bin_releaseMvn(targetRepo: "estasch.mvn",
+                            parentPom: "pom.xml",
+                            scanBuild: true)
+                }
+            }
+        }*/
+
+
+        stage('Test bin_sonarAnalysis') {
+            steps {
+                script {
+                    bin_sonarAnalysis(branch: "develop", parentPom:"pom.xml", additionalMavenGoals: "clean test",)
+                }
+            }
+        }
+    }
+}

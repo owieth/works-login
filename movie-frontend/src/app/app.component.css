@@ -1,0 +1,64 @@
+.header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  white-space: nowrap;
+}
+
+h1, img {
+  cursor: pointer;
+}
+
+.searchbutton {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.searchbar-text {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.first, .second, .third {
+  margin: 20px 0 0;
+}
+
+.active {
+  border-bottom-style: dotted;
+}
+
+li a {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 15px 100px 0 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li img {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 200px;
+}

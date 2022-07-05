@@ -1,0 +1,70 @@
+
+.content {
+  text-align: center;
+}
+
+.back-button{
+  visibility: visible;
+}
+.image {
+  display: block;
+  justify-content: center;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+}
+p{
+  width: 300px;
+}
+
+a{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.film-edit {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.button1 {
+  height: 50px;
+  width: 140px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/icons/010_bearbeiten_016_24@3x.png");
+}
+
+
+.button2 {
+  height: 50px;
+  width: 140px;
+  margin-left: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/icons/040_schliessen_104_24@3x.png");
+}
+
+button {
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+
+
+
+

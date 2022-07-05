@@ -1,0 +1,1217 @@
+@charset "UTF-8";
+/*Reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box !important;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border-radius: 0;
+}
+
+/*Fontsheet*/
+@font-face {
+  font-family: "SBBWeb";
+  src: url("../fonts/SBB_Font/SBBWeb-Roman.eot") format("eot"), url("../fonts/SBB_Font/SBBWeb-Roman.ttf") format("ttf"), url("../fonts/SBB_Font/SBBWeb-Roman.woff") format("woff"), url("../fonts/SBB_Font/SBBWeb-Roman.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBBWeb";
+  src: url("../fonts/SBB_Font/SBBWeb-Bold.eot") format("eot"), url("../fonts/SBB_Font/SBBWeb-Bold.ttf") format("ttf"), url("../fonts/SBB_Font/SBBWeb-Bold.woff") format("woff"), url("../fonts/SBB_Font/SBBWeb-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBBWeb";
+  src: url("../fonts/SBB_Font/SBBWeb-Italic.eot") format("eot"), url("../fonts/SBB_Font/SBBWeb-Italic.ttf") format("ttf"), url("../fonts/SBB_Font/SBBWeb-Italic.woff") format("woff"), url("../fonts/SBB_Font/SBBWeb-Italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SBBWeb";
+  src: url("../fonts/SBB_Font/SBBWeb-Condensed-Bold.eot") format("eot"), url("../fonts/SBB_Font/SBBWeb-Bold.ttf") format("ttf"), url("../fonts/SBB_Font/SBBWeb-Condensed-Bold.woff") format("woff"), url("../fonts/SBB_Font/SBBWeb-Condensed-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBBWeb";
+  src: url("../fonts/SBB_Font/SBBWeb-Condensed-Heavy.eot") format("eot"), url("../fonts/SBB_Font/SBBWeb-Condensed-Heavy.ttf") format("ttf"), url("../fonts/SBB_Font/SBBWeb-Condensed-Heavy.woff") format("woff"), url("../fonts/SBB_Font/SBBWeb-Condensed-Heavy.woff2") format("woff2");
+  font-weight: 650;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBBWeb";
+  src: url("../fonts/SBB_Font/SBBWeb-Light.eot") format("eot"), url("../fonts/SBB_Font/SBBWeb-Light.ttf") format("ttf"), url("../fonts/SBB_Font/SBBWeb-Light.woff") format("woff"), url("../fonts/SBB_Font/SBBWeb-Light.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBBWeb";
+  src: url("../fonts/SBB_Font/SBBWeb-Thin.eot") format("eot"), url("../fonts/SBB_Font/SBBWeb-Thin.ttf") format("ttf"), url("../fonts/SBB_Font/SBBWeb-Thin.woff") format("woff"), url("../fonts/SBB_Font/SBBWeb-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBBWeb";
+  src: url("../fonts/SBB_Font/SBBWeb-UltraLight.eot") format("eot"), url("../fonts/SBB_Font/SBBWeb-UltraLight.ttf") format("ttf"), url("../fonts/SBB_Font/SBBWeb-UltraLight.woff") format("woff"), url("../fonts/SBB_Font/SBBWeb-UltraLight.woff2") format("woff2");
+  font-weight: 50;
+  font-style: normal;
+}
+/*Icons*/
+@font-face {
+  font-family: "sbbicons";
+  src: url("../fonts/sbb-icons/sbbicons.eot");
+  src: url("../fonts/sbb-icons/sbbicons.eot?#iefix") format("embedded-opentype"), url("../fonts/sbb-icons/sbbicons.woff") format("woff"), url("../fonts/sbb-icons/sbbicons.ttf") format("truetype"), url("../fonts/sbb-icons/sbbicons.svg#sbbicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "sbbicons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  font-family: "sbbicons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-010-achtung-001:before {
+  content: "a";
+}
+
+.icon-010-alarm-019:before {
+  content: "b";
+}
+
+.icon-010-bearbeiten-016:before {
+  content: "c";
+}
+
+.icon-010-benachrichtigung-015:before {
+  content: "d";
+}
+
+.icon-010-bild-147:before {
+  content: "e";
+}
+
+.icon-010-brieftasche-146:before {
+  content: "f";
+}
+
+.icon-010-browser-159:before {
+  content: "g";
+}
+
+.icon-010-bueroklammer-121:before {
+  content: "h";
+}
+
+.icon-010-datenbank-171:before {
+  content: "i";
+}
+
+.icon-010-diagramm-163:before {
+  content: "j";
+}
+
+.icon-010-download-027:before {
+  content: "k";
+}
+
+.icon-010-e-mail-003:before {
+  content: "l";
+}
+
+.icon-010-einstellungen-014:before {
+  content: "m";
+}
+
+.icon-010-favorit-005:before {
+  content: "n";
+}
+
+.icon-010-fehler-126:before {
+  content: "o";
+}
+
+.icon-010-filter-024:before {
+  content: "p";
+}
+
+.icon-010-filter-regler-029:before {
+  content: "q";
+}
+
+.icon-010-geschenk-033:before {
+  content: "r";
+}
+
+.icon-010-herz-031:before {
+  content: "s";
+}
+
+.icon-010-hilfe-kreis-137:before {
+  content: "t";
+}
+
+.icon-010-information-011:before {
+  content: "w";
+}
+
+.icon-010-kaffe-023:before {
+  content: "x";
+}
+
+.icon-010-kalender-006:before {
+  content: "y";
+}
+
+.icon-010-kamera-203:before {
+  content: "z";
+}
+
+.icon-010-kategorie-030:before {
+  content: "A";
+}
+
+.icon-010-kontakt-166:before {
+  content: "B";
+}
+
+.icon-010-link-152:before {
+  content: "C";
+}
+
+.icon-010-navigation-017:before {
+  content: "D";
+}
+
+.icon-010-news-175:before {
+  content: "E";
+}
+
+.icon-010-papierkorb-008:before {
+  content: "F";
+}
+
+.icon-010-pin-148:before {
+  content: "G";
+}
+
+.icon-010-restaurant-022:before {
+  content: "H";
+}
+
+.icon-010-senden-142:before {
+  content: "I";
+}
+
+.icon-010-suche-009:before {
+  content: "J";
+}
+
+.icon-010-upload-028:before {
+  content: "K";
+}
+
+.icon-010-warenkorb-004:before {
+  content: "L";
+}
+
+.icon-010-wifi-020:before {
+  content: "M";
+}
+
+.icon-020-aendere-reihenfolge-125:before {
+  content: "N";
+}
+
+.icon-020-aktualisieren-002:before {
+  content: "O";
+}
+
+.icon-020-laden-007:before {
+  content: "P";
+}
+
+.icon-020-pfeil-klein-links-044:before {
+  content: "Q";
+}
+
+.icon-020-pfeil-klein-rauf:before {
+  content: "R";
+}
+
+.icon-020-pfeil-klein-rechts-045:before {
+  content: "S";
+}
+
+.icon-020-pfeil-klein-runter-043:before {
+  content: "T";
+}
+
+.icon-020-pfeil-rechts-037:before {
+  content: "U";
+}
+
+.icon-020-pfeil-links-kreis-041:before {
+  content: "V";
+}
+
+.icon-020-pfeil-rauf-kreis-046:before {
+  content: "W";
+}
+
+.icon-020-pfeil-rechts-kreis-042:before {
+  content: "X";
+}
+
+.icon-020-pfeil-unten-kreis-040:before {
+  content: "Y";
+}
+
+.icon-020-pfeil-vor-038:before {
+  content: "Z";
+}
+
+.icon-020-pfeil-vor-und-zurueck-039:before {
+  content: "0";
+}
+
+.icon-020-pfeil-zurueck-036:before {
+  content: "1";
+}
+
+.icon-020-rundreise-047:before {
+  content: "2";
+}
+
+.icon-020-vergroessern-144:before {
+  content: "3";
+}
+
+.icon-020-verkleinern-145:before {
+  content: "4";
+}
+
+.icon-030-anschalten-053:before {
+  content: "5";
+}
+
+.icon-030-ausrufezeichen-035:before {
+  content: "6";
+}
+
+.icon-030-entsperrt-113:before {
+  content: "7";
+}
+
+.icon-030-fragezeichen-115:before {
+  content: "8";
+}
+
+.icon-030-gesperrt-114:before {
+  content: "9";
+}
+
+.icon-030-ok-112:before {
+  content: "!";
+}
+
+.icon-030-pruefung-168:before {
+  content: '"';
+}
+
+.icon-030-sichtbar-096:before {
+  content: "#";
+}
+
+.icon-030-unsichtbar-095:before {
+  content: "$";
+}
+
+.icon-040-drei-punkte-menu-106:before {
+  content: "%";
+}
+
+.icon-040-hamburgermenu-102:before {
+  content: "&";
+}
+
+.icon-040-home-101:before {
+  content: "'";
+}
+
+.icon-040-minus-105:before {
+  content: "(";
+}
+
+.icon-040-plus-103:before {
+  content: ")";
+}
+
+.icon-040-schliessen-104:before {
+  content: "*";
+}
+
+.icon-050-daumen-hoch-052:before {
+  content: "+";
+}
+
+.icon-050-daumen-runtern-060:before {
+  content: ",";
+}
+
+.icon-050-gluehbirne-an-048:before {
+  content: "-";
+}
+
+.icon-050-gluehbirne-aus-049:before {
+  content: ".";
+}
+
+.icon-050-handschlag-058:before {
+  content: "/";
+}
+
+.icon-050-netzwerk-055:before {
+  content: ";";
+}
+
+.icon-050-share-025:before {
+  content: "<";
+}
+
+.icon-050-sprechblase-2-051:before {
+  content: "=";
+}
+
+.icon-050-sprechblase-3-leer-054:before {
+  content: "@";
+}
+
+.icon-050-sprechblase-050:before {
+  content: "[";
+}
+
+.icon-060-berechtigung-162:before {
+  content: "]";
+}
+
+.icon-060-geburtstag-094:before {
+  content: "^";
+}
+
+.icon-060-user-2-093:before {
+  content: "_";
+}
+
+.icon-060-user-3-gruppe-057:before {
+  content: "`";
+}
+
+.icon-060-user-3-reihe-056:before {
+  content: "{";
+}
+
+.icon-060-user-092:before {
+  content: "|";
+}
+
+.icon-060-user-auswechslung-097:before {
+  content: "~";
+}
+
+.icon-060-user-schulung-169:before {
+  content: "\\";
+}
+
+.icon-060-user-support-156:before {
+  content: "";
+}
+
+.icon-060-user-zugriff-124:before {
+  content: "";
+}
+
+.icon-070-dokument-bild-062:before {
+  content: "";
+}
+
+.icon-070-dokument-check-176:before {
+  content: "";
+}
+
+.icon-070-dokument-pdf-061:before {
+  content: "";
+}
+
+.icon-070-dokument-standard-067:before {
+  content: "";
+}
+
+.icon-070-dokument-text-063:before {
+  content: "";
+}
+
+.icon-070-dokument-ton-064:before {
+  content: "";
+}
+
+.icon-070-dokument-video-065:before {
+  content: "";
+}
+
+.icon-070-dokument-zip-066:before {
+  content: "";
+}
+
+.icon-070-ordner-018:before {
+  content: "";
+}
+
+.icon-070-ordner-dateiablage-160:before {
+  content: "";
+}
+
+.icon-070-ordner-hinzufuegen-130:before {
+  content: "";
+}
+
+.icon-070-ordner-metadaten-131:before {
+  content: "";
+}
+
+.icon-070-ordner-oeffnen-059:before {
+  content: "";
+}
+
+.icon-080-auslastung-0-079:before {
+  content: "";
+}
+
+.icon-080-fussweg-070:before {
+  content: "";
+}
+
+.icon-080-meine-reise-071:before {
+  content: "";
+}
+
+.icon-080-meine-reise-aus-072:before {
+  content: "";
+}
+
+.icon-080-perlschnur-ende-139:before {
+  content: "";
+}
+
+.icon-080-perlschnur-start-140:before {
+  content: "";
+}
+
+.icon-080-promocode-141:before {
+  content: "";
+}
+
+.icon-080-prozent-078:before {
+  content: "";
+}
+
+.icon-080-rollstuhl-073:before {
+  content: "";
+}
+
+.icon-080-rollstuhl-reservation-075:before {
+  content: "";
+}
+
+.icon-080-rollstuhl-teilweise-074:before {
+  content: "";
+}
+
+.icon-080-rollstuhl-unsicher-076:before {
+  content: "";
+}
+
+.icon-080-rollstuhl-untauglich-077:before {
+  content: "";
+}
+
+.icon-080-uhr-010:before {
+  content: "";
+}
+
+.icon-080-wechsel-068:before {
+  content: "";
+}
+
+.icon-080-zugformation-083:before {
+  content: "";
+}
+
+.icon-090-billett-event-032:before {
+  content: "";
+}
+
+.icon-090-billett-favorit-136:before {
+  content: "";
+}
+
+.icon-090-billett-kurzstrecke-143:before {
+  content: "";
+}
+
+.icon-090-billett-nicht-verfuegbar-138:before {
+  content: "";
+}
+
+.icon-090-billett-qrcode-026:before {
+  content: "";
+}
+
+.icon-090-billett-tageskarte-135:before {
+  content: "";
+}
+
+.icon-090-billette-sbb-069:before {
+  content: "";
+}
+
+.icon-100-bahnhof-117:before {
+  content: "";
+}
+
+.icon-100-couponing-134:before {
+  content: "";
+}
+
+.icon-100-geldwechsel-120:before {
+  content: "";
+}
+
+.icon-100-hostel-119:before {
+  content: "";
+}
+
+.icon-100-service-116:before {
+  content: "";
+}
+
+.icon-100-treffpunkt-118:before {
+  content: "";
+}
+
+.icon-110-gps-012:before {
+  content: "";
+}
+
+.icon-110-gps-aus-013:before {
+  content: "";
+}
+
+.icon-110-hoeher-123:before {
+  content: "";
+}
+
+.icon-110-marker-098:before {
+  content: "";
+}
+
+.icon-110-marker-a-099:before {
+  content: "";
+}
+
+.icon-110-marker-b-100:before {
+  content: "";
+}
+
+.icon-110-marker-in-der-naehe-107:before {
+  content: "";
+}
+
+.icon-110-marker-karte-173:before {
+  content: "";
+}
+
+.icon-110-tiefer-122:before {
+  content: "";
+}
+
+.icon-120-aktenkoffer-090:before {
+  content: "";
+}
+
+.icon-120-anschluesse-154:before {
+  content: "";
+}
+
+.icon-120-buerostuhl-087:before {
+  content: "";
+}
+
+.icon-120-drucker-021:before {
+  content: "";
+}
+
+.icon-120-funkgeraet-177:before {
+  content: "";
+}
+
+.icon-120-kein-aktenkoffer-091:before {
+  content: "";
+}
+
+.icon-120-laptop-167:before {
+  content: "";
+}
+
+.icon-120-laptop-smartphone-165:before {
+  content: "";
+}
+
+.icon-120-monitor-085:before {
+  content: "";
+}
+
+.icon-120-scanner-178:before {
+  content: "";
+}
+
+.icon-120-schreibtisch-088:before {
+  content: "";
+}
+
+.icon-120-schreibtisch-verstellbar-089:before {
+  content: "";
+}
+
+.icon-120-tastatur-086:before {
+  content: "";
+}
+
+.icon-120-telefon-festnetz-164:before {
+  content: "";
+}
+
+.icon-120-telefon-gsm-172:before {
+  content: "";
+}
+
+.icon-120-telefon-smartphone-084:before {
+  content: "";
+}
+
+.icon-130-facebook-108:before {
+  content: "";
+}
+
+.icon-130-googleplus-110:before {
+  content: "";
+}
+
+.icon-130-instagram-109:before {
+  content: "";
+}
+
+.icon-130-twitter-107:before {
+  content: "";
+}
+
+.icon-130-youtube-111:before {
+  content: "";
+}
+
+.icon-140-bewoelkt-194:before {
+  content: "";
+}
+
+.icon-140-bewoelkt-mit-sonne-186:before {
+  content: "";
+}
+
+.icon-140-gewitter-202:before {
+  content: "";
+}
+
+.icon-140-gewitter-bei-nacht-189:before {
+  content: "";
+}
+
+.icon-140-graupel-196:before {
+  content: "";
+}
+
+.icon-140-leicht-bewoelkt-197:before {
+  content: "";
+}
+
+.icon-140-mond-151:before {
+  content: "";
+}
+
+.icon-140-nebel-148:before {
+  content: "";
+}
+
+.icon-140-niesel-195:before {
+  content: "";
+}
+
+.icon-140-regen-199:before {
+  content: "";
+}
+
+.icon-140-regen-bei-nacht-190:before {
+  content: "";
+}
+
+.icon-140-regen-mit-sonne-198:before {
+  content: "";
+}
+
+.icon-140-schnee-201:before {
+  content: "";
+}
+
+.icon-140-schnee-gewitter-184:before {
+  content: "";
+}
+
+.icon-140-schnee-mit-sonne-193:before {
+  content: "";
+}
+
+.icon-140-schnee-mond-188:before {
+  content: "";
+}
+
+.icon-140-schnee-sturm-200:before {
+  content: "";
+}
+
+.icon-140-schneestern-185:before {
+  content: "";
+}
+
+.icon-140-sonnig-149:before {
+  content: "";
+}
+
+.icon-140-starker-regen-bei-nacht-191:before {
+  content: "";
+}
+
+.icon-140-starker-regen-mit-sonne-192:before {
+  content: "";
+}
+
+.icon-140-stratus-150:before {
+  content: "";
+}
+
+.icon-140-wolke-mond-187:before {
+  content: "";
+}
+
+/*Hier kommt das ganze SCSS das man überall verwenden möchte. Bsp: html, body, h1 - h6, a, button, input....*/
+header {
+  box-shadow: 0px 2px 2px #d2d2d2;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+header h1 {
+  justify-content: center;
+  color: #1e1e1e;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "SBB", sans-serif;
+  display: flex;
+  padding: 22px;
+}
+
+.navigation-buttons {
+  box-shadow: 0px 1px 0px #d2d2d2;
+  overflow: auto;
+  white-space: nowrap;
+  padding-top: 85px;
+  margin-right: 14px;
+}
+.navigation-buttons button {
+  margin-left: 14px;
+  font-family: "SBB", sans-serif;
+  font-size: 16px;
+  height: 40px;
+  border: none;
+  padding-right: 27px;
+  padding-left: 26px;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+.navigation-buttons button:hover {
+  background-color: #eb0000;
+  color: #fff;
+}
+.navigation-buttons button.active {
+  background-color: #eb0000;
+  color: #fff;
+}
+.navigation-buttons p {
+  margin-left: 14px;
+  font-family: "SBB", sans-serif;
+  font-size: 14px;
+  position: absolute;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.icons {
+  position: absolute;
+  color: #fff;
+  padding-top: 170px;
+  display: flex;
+  float: right;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 14px;
+}
+.icons .icon-050-daumen-hoch-052 {
+  padding-right: 36px;
+}
+.icons .icon-050-share-025 {
+  padding-right: 36px;
+}
+
+hr {
+  width: 51px;
+  border-color: #1e1e1e;
+  margin-left: 0px;
+}
+
+h2 {
+  font-family: "SBB Light", sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.textbox-head {
+  color: #767676;
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-box, .second-box, .third-box {
+  width: auto;
+  margin: 14px;
+  height: auto;
+  background-color: #F6F6F6;
+  font-family: "SBB", sans-serif;
+  font-size: 16px;
+  color: #1e1e1e;
+}
+.first-box #first-picture, .second-box #first-picture, .third-box #first-picture {
+  height: 193px;
+  width: 100%;
+}
+.first-box .first-text-box, .first-box .second-text-box, .first-box .third-text-box, .second-box .first-text-box, .second-box .second-text-box, .second-box .third-text-box, .third-box .first-text-box, .third-box .second-text-box, .third-box .third-text-box {
+  padding: 15px;
+}
+
+.picturebox1 {
+  height: 195px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, black 100%), url("../images/carlos-dominguez-342207-unsplash.jpg");
+  background-size: cover;
+}
+
+.picturebox2 {
+  height: 195px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, black 100%), url("../images/domenico-loia-272251-unsplash.jpg");
+  background-size: cover;
+}
+
+.picturebox3 {
+  height: 195px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, black 100%), url("../images/rawpixel-com-567018-unsplash.jpg");
+  background-size: cover;
+}
+
+.survey-box {
+  background-color: #eb0000;
+  height: auto;
+  width: auto;
+  margin: 14px;
+  color: #fff;
+}
+.survey-box hr {
+  border-color: #fff;
+}
+.survey-box .survey-name-input {
+  font-family: "SBB", sans-serif;
+  font-size: 16px;
+}
+
+.survey-title {
+  padding: 15px;
+  font-family: "SBB", sans-serif;
+  font-size: 14px;
+}
+
+.survey-choice {
+  padding: 0px 15px 5px 15px;
+}
+
+.text-name {
+  background-color: transparent;
+  color: #fff;
+  margin: 10px 15px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.send-button {
+  font-family: "SBB", sans-serif;
+  font-size: 16px;
+  height: 40px;
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  color: #eb0000;
+}
+
+.survey-send-button {
+  padding: 15px;
+}
+
+.survey-radiobuttons {
+  margin-left: 15px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "SBB", sans-serif;
+  font-size: 16px;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eb0000;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #eb0000;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #eb0000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */

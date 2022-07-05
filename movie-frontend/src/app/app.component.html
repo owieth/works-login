@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="header">
+  <nav class="header-navbar">
+    <ul>
+      <div class="back-button" (click)="goBack()"></div>
+      <li><img src="../assets/movie.png" routerLink="/übersicht"></li>
+      <li class="first"><a routerLink="/übersicht">
+        {{ title }}
+      </a></li>
+      <li class="second"><a routerLink="/neu">Film hinzufügen</a></li>
+      <li class="third">
+        <div class="searchbar">
+          <input type="search" class="searchbar-text">
+          <button type="submit" class="searchbutton"><i class="material-icons">search</i></button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+<router-outlet></router-outlet>

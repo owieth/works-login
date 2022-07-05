@@ -1,0 +1,479 @@
+@import '_reset.scss';
+@import '_fonts.scss';
+@import '_icons.scss';
+@import '_colors.scss';
+@import '_vars.scss';
+/*Hier kommt das ganze SCSS das man überall verwenden möchte. Bsp: html, body, h1 - h6, a, button, input....*/
+body {
+    font-family: $font-family-default;
+    line-height: 1.3;
+    font-size: $font-size-m;
+}
+
+main {
+    padding: 0 14px 14px;
+
+    @media screen and (min-width: $screen-l) {
+        max-width: 1200px;
+        margin: auto;
+        padding: 10px 0 0 0;
+    }
+}
+
+h1 {
+    color: $color-100-schwarz;
+    font-weight: bold;
+
+}
+
+h2 {
+    font-family: "SBB Light", sans-serif;
+    font-size: $font-size-l;
+    padding-top: 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    font-family: $font-family-default;
+    font-size: $font-size-m;
+}
+
+hr {
+    width: 51px;
+    border-color: $color-100-schwarz;
+    margin-left: 0px;
+    display: block;
+    text-align: left;
+}
+
+header {
+    box-shadow: 0px 2px 2px $color-20-schwarz;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-weiss;
+    z-index: 1;
+    padding: 22px;
+
+    @media screen and (min-width: $screen-s) {
+        color: $color-weiss;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 100%), url("../images/Banner-Desktop.jpg");
+        background-size: cover;
+        height: 539px;
+        width: 100%;
+        position: static;
+        box-shadow: none;
+        white-space: pre-wrap;
+        display: flex;
+        text-align: center;
+
+        h1 {
+            visibility: hidden;
+            padding: 10px;
+
+          @media screen and (min-width: $screen-m) {
+            margin: 100px;
+          }
+            &:after {
+                color: $color-weiss;
+                font-weight: initial;
+                font-size: 35px;
+                content: 'You can read tutorials all day but you´ll only improve by doing';
+                visibility: visible;
+
+                @media screen and (min-width: $screen-m) {
+                  font-size: 45px;
+                }
+                @media screen and (min-width: $screen-l) {
+                  font-size: 55px;
+                  max-width: 1200px;
+                  margin: auto;
+                }
+            }
+        }
+    }
+}
+
+//Buttons
+//Style button-primary
+.button-primary {
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+  border: none;
+  background-color: $color-weiss;
+  color: $color-100-rot;
+}
+
+//Style button-secondary
+.button-secondary {
+  cursor: pointer;
+  margin-right: 14px;
+  height: 40px;
+  border: none;
+  padding-right: 27px;
+  padding-left: 26px;
+  white-space: pre;
+  flex-direction: row;
+  margin-top: auto;
+  background-color: $color-20-schwarz;
+
+  &:hover {
+    background-color: $color-30-schwarz;
+  }
+  @media screen and (min-width: $screen-s) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.button-secondary-active {
+  background-color: $color-100-rot;
+  color: $color-weiss;
+
+  &:hover {
+    background-color: $color-125-rot;
+  }
+}
+
+//Buttons for filtering in Mobileview
+.button-group {
+  white-space: nowrap;
+  overflow: auto;
+
+  border-bottom: 1px solid $color-20-schwarz;
+  margin-bottom: 10px;
+  padding: 0 0 15px 15px;
+
+  @media screen and (min-width: $screen-s) {
+    display: flex;
+    padding: 0 0 15px 15px;
+    width: 100%;
+
+  }
+  @media screen and (min-width: $screen-m){
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    justify-content: flex-end;
+    border-bottom: none;
+    margin: 0;
+  }
+  @media screen and (min-width: $screen-l) {
+    border: none;
+    width: 100%;
+  }
+    p {
+        font-size: $font-size-s;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+.button-secondary-last {
+  @media screen and (min-width: $screen-s) {
+    justify-content: center;
+
+  }
+
+  @media screen and (min-width: $screen-l) {
+    margin-right: 0px;
+  }
+}
+
+.filter-desktop {
+  @media screen and (min-width: $screen-m) {
+    display: flex;
+    white-space: nowrap;
+    border-bottom: 1px solid $color-20-schwarz;
+    margin: 10px 0;
+    padding: 15px 0;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $screen-l) {
+    display: flex;
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: auto;
+    border: none;
+  }
+}
+
+.filter-text {
+  display: flex;
+  padding-top: 70px;
+  position: static;
+  margin: 0 14px;
+
+  @media screen and (min-width: $screen-s){
+    padding-top: 30px;
+  }
+  @media screen and (min-width: $screen-m){
+    padding-top:0;
+  }
+  @media screen and (min-width: $screen-l) {
+    margin: 0 30px 0 0;
+  }
+}
+
+.title-desktop {
+    display: none;
+    @media screen and (min-width: $screen-s) {
+      display: flex;
+      font-family: "SBB Light", sans-serif;
+      font-size: 25px;
+      margin: 20px 14px 0;
+    }
+
+    @media screen and (min-width: $screen-l) {
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 0 30px 0;
+    }
+}
+
+.header-filter-desktop {
+    display: none;
+    @media screen and (min-width: $screen-s) {
+            display: flex;
+            position: absolute;
+            color: $color-weiss;
+            flex-direction: row;
+            top: 0;
+            right: 0;
+            bottom: auto;
+            left: auto;
+            justify-content: space-between;
+            list-style: none;
+            width: auto;
+            border: none;
+            font-weight: bold;
+            padding: 14px;
+
+        li {
+            margin-right: 26px;
+            padding-bottom: 10px;
+        }
+
+        &-active {
+            border-bottom: 2px solid white;
+            width: 75px;
+        }
+    }
+
+
+}
+
+//Flexboxes for Cards in Desktopview
+.card-container {
+  @media screen and (min-width: $screen-s){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+    .section-text {
+        padding: 14px;
+    }
+    .bottom-text {
+        padding: 14px 14px 30px;
+    }
+    .textbox-head {
+        color: $color-40-schwarz;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+//All Cards
+.card-layout {
+    width: auto;
+    margin-bottom: 14px;
+    height: auto;
+    background-color: $color-10-schwarz;
+    font-size: $font-size-m;
+    color: $color-100-schwarz;
+
+
+    .icons {
+        position: absolute;
+        color: $color-weiss;
+        bottom: 0;
+        margin-right: 14px;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+
+        i {
+            position: relative;
+            font-size: $font-size-l;
+
+        }
+        span {
+            position: relative;
+            font-size: $font-size-m;
+            margin: 0px 22px 5px 0px;
+        }
+
+        .last-item {
+            margin: 0;
+        }
+    }
+    .picture-top, .picture-middle, .picture-bottom{
+        height: 195px;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url("../images/carlos-dominguez-342207-unsplash.jpg");
+        background-size: cover;
+        position: relative;
+    }
+    .picture-middle {
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url("../images/domenico-loia-272251-unsplash.jpg");;
+    }
+    .picture-bottom {
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url("../images/rawpixel-com-567018-unsplash.jpg");
+    }
+}
+
+
+
+
+//Survey
+.card-formular {
+    background-color: $color-100-rot;
+    height: auto;
+    width: auto;
+    color: $color-weiss;
+    margin-bottom: 14px;
+    padding: 15px;
+    hr{
+        border-color: $color-weiss;
+        border-style: solid;
+    }
+
+
+    .name-input {
+        background-color: transparent;
+        color: $color-weiss;
+        height: 40px;
+        width: 100%;
+        border-style: solid;
+        border-color: $color-weiss;
+        padding: 10px;
+    }
+}
+
+.card-big {
+  @media screen and (min-width: $screen-s) {
+    width: calc(100% / 2 - 7.5px);
+  }
+  @media screen and (min-width: $screen-m){
+    width: calc( 2 * (100% / 3) - 7.5px);
+  }
+}
+
+.card-small {
+  @media screen and (min-width: $screen-s) {
+    width: calc(100% / 2 - 7.5px);
+  }
+  @media screen and (min-width: $screen-m){
+    width: calc((100% / 3) - 7.5px);
+  }
+}
+
+
+
+//Radiobuttons
+.input-radio {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $color-100-rot;
+    border-radius: 50%;
+    border: 1px solid $color-weiss;
+}
+
+.input-radio:hover input ~ .checkmark {
+    background-color: $color-100-rot;
+}
+
+.input-radio input:checked ~ .checkmark {
+    background-color: $color-100-rot;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.input-radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.input-radio .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $color-weiss;
+}
+
+//Navigationbar
+nav {
+    background-color: $color-weiss;
+    position: fixed;
+    font-size: $font-size-s;
+    height: 52px;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $color-20-schwarz;
+
+    a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+        color: $color-100-schwarz;
+        i {
+            font-size: $font-size-l;
+            color: $color-100-schwarz;
+        }
+    }
+    .active-button {
+        color: $color-100-rot;
+    }
+
+    @media screen and (min-width: $screen-s) {
+        display: none;
+    }
+}

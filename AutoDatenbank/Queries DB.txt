@@ -1,0 +1,24 @@
+create table auto_marke (
+	ID SERIAL PRIMARY KEY, 
+	Marke	TEXT NOT NULL
+)
+
+create table auto_infos (
+	ID SERIAL PRIMARY KEY,
+	Name TEXT NOT NULL,
+	Marke INT NOT NULL,
+	FOREIGN KEY (Marke) REFERENCES auto_marke(ID)	
+)
+
+INSERT INTO auto_marke(Marke) VALUES ('Lamborghini'),
+									  ('Ferrari'), 
+									  ('BMW'), 
+									  ('Audi');
+									  
+INSERT INTO auto_infos(Name, Marke) VALUES ('Aventador', 1),
+											('LaFerrari', 2),
+											('M4', 3),
+											('RS6', 4);
+
+select * from auto_marke;
+select * from auto_infos;

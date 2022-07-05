@@ -1,0 +1,23 @@
+
+.content {
+  margin: 150px 0;
+  display: block;
+}
+
+label {
+  flex-wrap: unset;
+}
+
+.image, .title, .button, h2{
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+
+input {
+  margin-left: 10px;
+}
+
+
+
+

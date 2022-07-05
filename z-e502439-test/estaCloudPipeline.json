@@ -1,0 +1,105 @@
+{
+  "mainBranch": "master",
+  "hotfixBranch": "hotfix",
+  "senderNameOfMail": "noreply-jenkins-oli-version",
+  "docker": { 
+    "dockerFile": "docker/Dockerfile", 
+    "artifactoryDockerRepo": "estasch", 
+    "openshiftAppName": "e502439-olisdemoapp" 
+  },
+  "mvn": {
+    "parentPom": "pom.xml",
+    "deployableArtifactsPom": "pom.xml",
+    "artifactoryMavenRepo": "estasch.mvn"
+  },
+  "stages": [
+    {
+      "stageName": "test",
+      "isOpenshiftDeploymentEnabled": true,
+      "openshiftCluster": "vias",
+      "openshiftProject": "esta-cloud-test",
+      "openshiftJenkinsCredentialsId": "0e5f1bba-3237-47b9-9cf8-f4ff549339c3",
+      "preCiDeploymentJob": "",
+      "postCiDeploymentJob": ""
+    },
+    {
+      "stageName": "dev",
+      "isOpenshiftDeploymentEnabled": true,
+      "openshiftCluster": "vias",
+      "openshiftProject": "esta-cloud-dev",
+      "openshiftJenkinsCredentialsId": "0e5f1bba-3237-47b9-9cf8-f4ff549339c3",
+      "preCiDeploymentJob": "",
+      "postCiDeploymentJob": ""
+    },
+    {
+      "stageName": "inte",
+      "isOpenshiftDeploymentEnabled": true,
+      "openshiftCluster": "OTC_TEST_04",
+      "openshiftProject": "esta-cloud-dev",
+      "openshiftJenkinsCredentialsId": "12d8a7bf-a7a1-4d8e-a958-0283b5c86083",
+      "preCiDeploymentJob": "",
+      "postCiDeploymentJob": "",
+      "preDeployConfirmUNr": [
+        "e502439"
+      ]
+    },
+    {
+      "stageName": "prod",
+      "isOpenshiftDeploymentEnabled": true,
+      "openshiftCluster": "vias",
+      "openshiftProject": "esta-cloud-prod",
+      "openshiftJenkinsCredentialsId": "0e5f1bba-3237-47b9-9cf8-f4ff549339c3",
+      "preCiDeploymentJob": "",
+      "postCiDeploymentJob": ""
+    }
+  ],
+  "steps": [
+    {
+      "stepType": "continuous",
+      "isBuildEnabled": true,
+      "branchNamePrefixes": [
+        "feature"
+      ],
+      "additionalBuildParams": "-DskipITs"
+    },
+    {
+      "stepType": "integrationBuild",
+      "isBuildEnabled": true,
+      "sonarScanEnabled": true,
+      "xrayScanEnabled": true,
+      "failOnXrayScan": false,
+      "staging": {
+        "stages": [
+          "dev"
+        ]
+      },
+      "additionalBuildParams": "-fullTestSet",
+      "triggerBuildOnCommitEnabled": false
+    },
+    {
+      "stepType": "release",
+      "isBuildEnabled": true,
+      "sonarScanEnabled": false,
+      "xrayScanEnabled": false,
+      "failOnXrayScan": true,
+      "staging": {
+        "stages": [
+          "dev",
+          "test"
+        ]
+      },
+      "additionalBuildParams": "-DskipITs",
+      "triggerBuildOnCommitEnabled": true,
+      "hotfixCreationEnabled": false
+    },
+    {
+      "stepType": "hotfix",
+      "isBuildEnabled": false,
+      "staging": {
+        "stages": [
+          "test"
+        ]
+      }
+    }
+  ]
+}

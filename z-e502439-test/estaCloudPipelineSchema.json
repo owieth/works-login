@@ -1,0 +1,492 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SbbPipelineConfigSchema",
+  "type": "object",
+  "title": "SBB Pipeline Config Schema",
+  "required": [
+    "mainBranch",
+    "steps",
+    "stages"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "mainBranch": {
+      "type": "string",
+      "description": "Name des Hauptbranches im Lean Git Flow. Von hier aus werden Versionen gezogen.",
+      "examples": [
+        "develop"
+      ]
+    },
+    "hotfixBranch": {
+      "type": "string",
+      "description": "Basisname des Hotfixbranches. Der Effektive Branchname wird dann inkl. der Version lauten hotfix/1.2.3",
+      "examples": [
+        "hotfix"
+      ]
+    },
+    "senderNameOfMail": {
+      "type": "string",
+      "description": "Name des Absenders vom Notification-Mail. An den hier eingebenen Namen wird automatisch @sbb.ch angehängt.",
+      "examples": [
+        "noreply-jenkins"
+      ]
+    },
+    "buildStage": {
+      "type": "string",
+      "description": "BuildStage welche überschrieben werden kann.",
+      "examples": [
+        "PRD"
+      ]
+    },
+    "versionIncrementPosition": {
+      "type": "string",
+      "description": "Default ist minor. Wenn dieses Propery übersteuert wird ist kein HotfixFall möglich.",
+      "enum": [
+        "minor",
+        "major",
+        "patch"
+      ]
+    },
+    "docker": {
+      "type": [
+        "object",
+        "array"
+      ],
+      "$ref": "#/definitions/docker"
+    },
+    "mvn": {
+      "$ref": "#/definitions/mvn"
+    },
+    "npm": {
+      "$ref": "#/definitions/npm"
+    },
+    "stages": {
+      "type": [
+        "array",
+        "string"
+      ],
+      "anyOf": [
+        {
+          "$ref": "#/definitions/stages"
+        },
+        {
+          "type": "string",
+          "description": "Fuer Projektuebergreifende Stages, kann ein direkter URL angegeben werden",
+          "examples": [
+            "https://code.sbb.ch/projects/KD_ESTA/repos..."
+          ]
+        }
+      ]
+    },
+    "steps": {
+      "type": [
+        "array",
+        "string"
+      ],
+      "anyOf": [
+        {
+          "$ref": "#/definitions/steps"
+        },
+        {
+          "type": "string",
+          "description": "Fuer Projektuebergreifende Step, kann ein direkter URL angegeben werden",
+          "examples": [
+            "https://code.sbb.ch/projects/KD_ESTA/repos..."
+          ]
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stageName",
+          "openshiftProject",
+          "openshiftCluster",
+          "openshiftJenkinsCredentialsId"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "stageName": {
+            "type": "string",
+            "description": "Name der Applikation in Openshift. Ist auch der Name der Deploymentconfig.",
+            "examples": [
+              "devl"
+            ]
+          },
+          "isOpenshiftDeploymentEnabled": {
+            "type": "boolean",
+            "description": "Kann true/false sein. Hier kann das Deployment ein- oder ausgeschalten werden.",
+            "examples": [
+              true
+            ]
+          },
+          "openshiftProject": {
+            "type": "string",
+            "description": "Hier gibt man den Namen / Namespace des Openshift Projektes an",
+            "examples": [
+              "esta-cloud-dev"
+            ]
+          },
+          "openshiftCluster": {
+            "type": "string",
+            "description": "Openshift Cluster aws oder vias",
+            "examples": [
+              "vias"
+            ]
+          },
+          "openshiftJenkinsCredentialsId": {
+            "type": "string",
+            "description": "Die Jenkins CredentialId: 34b64477-3960-4fec-8791-cc859e2abcde",
+            "examples": [
+              "21b64477-3960-4fec-8791-123456789"
+            ]
+          },
+          "preCiDeploymentJob": {
+            "type": "string",
+            "description": "Der Jenkins-Job der vor diesem Buildjob laufen soll",
+            "examples": [
+              ""
+            ]
+          },
+          "postCiDeploymentJob": {
+            "type": "string",
+            "description": "Der Jenkins-Job der nach diesem Buildjob laufen soll",
+            "examples": [
+              ""
+            ]
+          },
+          "preDeployConfirmUNr": {
+            "type": "array",
+            "description": "An array of U-Nummern which can accept the StagingRequest on a Stage in Jenkins.",
+            "examples": [
+              ""
+            ]
+          },
+          "api": {
+            "$ref": "#/definitions/api"
+          }
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stepType",
+          "isBuildEnabled"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "stepType": {
+            "type": "string",
+            "description": "Da gibt es verschiedene Typen:\n\ncontinuous, integration, release, hotfix",
+            "enum": [
+              "continuous",
+              "release",
+              "integrationBuild",
+              "hotfix"
+            ]
+          },
+          "isBuildEnabled": {
+            "description": "Soll der Build ein- oder ausgeschalten werden. (true / false)",
+            "type": "boolean",
+            "examples": [
+              true
+            ]
+          },
+          "branchNamePrefixes": {
+            "type": "array",
+            "description": "Liste Prefixes von Branches auf welchen der ContiniousBuild durchgeführt werden soll.",
+            "examples": [
+              "feature"
+            ]
+          },
+          "additionalBuildParams": {
+            "description": "Zusätzliche Buildparameter wie z.B. -DskipITs",
+            "type": "string",
+            "examples": [
+              "-DskipITs"
+            ]
+          },
+          "xrayScanEnabled": {
+            "description": "Soll der XRayscan (Binärpaketscanner) von JFrog ausgeführt werden? (true / false)",
+            "type": "boolean",
+            "examples": [
+              "true"
+            ]
+          },
+          "failOnXrayScan": {
+            "description": "Soll der Build fehlschlagen, falls der XRayscan Verletzungen findet? (true / false)",
+            "type": "boolean",
+            "examples": [
+              "true"
+            ]
+          },
+          "sonarScanEnabled": {
+            "description": "Soll der Sonarscan ausgeführt werden? (true / false)",
+            "type": "boolean",
+            "examples": [
+              "true"
+            ]
+          },
+          "staging": {
+            "$ref": "#/definitions/staging"
+          },
+          "hotfixCreationEnabled": {
+            "description": "Wenn eingeschalten, wird am Ende dieses Builds ein hotfix branch erstellt. (true | false)",
+            "type": "boolean",
+            "examples": [
+              "true"
+            ]
+          },
+          "triggerBuildOnCommitEnabled": {
+            "description": "Soll bei einem Bitbucket Event auf dem mainBranch ein Build ausgeführt werden? (true | false)",
+            "type": "boolean",
+            "examples": [
+              "true"
+            ]
+          }
+        }
+      }
+    },
+    "staging": {
+      "type": "object",
+      "description": "Über das Property Staging kann nach einem Build das Staging des gebuildeten Artifakts konfiguriert werden. ",
+      "additionalProperties": false,
+      "properties": {
+        "stagingType": {
+          "type": "string",
+          "enum": [
+            "simple",
+            "bluegreen",
+            "subsequent"
+          ]
+        },
+        "jobId": {
+          "type": "string",
+          "description": "Definiert den zu aufrufenden Jenkinsjob z.B. esta-cloud-pipeline-java11",
+          "examples": [
+            "esta-cloud-pipeline-java11"
+          ]
+        },
+        "variants": {
+          "type": "array",
+          "description": "Varianten des Deployments - kommt vor allem beim BlueGreen Deployment zum Zuge, wo man blue, green usw. als Varianten angeben kann",
+          "items": {
+            "type": "string"
+          }
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "properties": {
+            "stagingType": {
+              "const": "simple"
+            }
+          },
+          "required": [
+            "stages"
+          ]
+        },
+        {
+          "properties": {
+            "stagingType": {
+              "const": "bluegreen"
+            }
+          },
+          "required": [
+            "stages",
+            "variants"
+          ]
+        },
+        {
+          "properties": {
+            "stagingType": {
+              "const": "subsequent"
+            }
+          },
+          "required": [
+            "stages",
+            "jobId"
+          ]
+        }
+      ]
+    },
+    "api": {
+      "type": "object",
+      "required": [
+        "instance",
+        "clientSecret",
+        "clientId"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "instance": {
+          "type": "string",
+          "description": "Instance of ApimStageKey",
+          "examples": [
+            "int, prod"
+          ]
+        },
+        "artifactoryUser": {
+          "type": "string",
+          "description": "U-Nummer for Artifactorylogin",
+          "examples": [
+            "e502312"
+          ]
+        },
+        "artifactoryApikey": {
+          "type": "string",
+          "description": "Artifactory API-Key from artifactoryUser",
+          "examples": [
+            "Cp5bBND"
+          ]
+        },
+        "clientSecret": {
+          "type": "string",
+          "description": "Secret of API Client",
+          "examples": [
+            ""
+          ]
+        },
+        "clientId": {
+          "type": "string",
+          "description": "ID of API Client with permissions on the API (Client Credentials, Service Owner Role of API)",
+          "examples": [
+            ""
+          ]
+        },
+        "classifier": {
+          "type": "string",
+          "description": "ConfigClassifier For ApimConfigurationFiles default: empty",
+          "examples": [
+            ""
+          ]
+        }
+      }
+    },
+    "docker": {
+      "description": "Hier wird die Konfiguration für das DockerImage angegeben: [dockerFile: 'docker',artifactoryDockerRepo:'marthaler.docker', openshiftAppName: 'demoapp']",
+      "required": [
+        "artifactoryDockerRepo",
+        "openshiftAppName"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "dockerFile": {
+          "type": "string",
+          "description": "Der Pfad zum Dockerfile z.B. /Dockerfile oder docker/Dockerfile, wenn leer, wird der Selrunningjar Build verwendet und ein Dockerfile generiert.",
+          "examples": [
+            "docker/Dockerfile"
+          ]
+        },
+        "artifactoryDockerRepo": {
+          "type": "string",
+          "description": "Repository wo das Dockerimage hingeschrieben werden soll",
+          "examples": [
+            "marthaler.docker"
+          ]
+        },
+        "openshiftAppName": {
+          "$id": "#/properties/openshiftAppName",
+          "type": "string",
+          "title": "The Openshiftappname Schema",
+          "examples": [
+            "demoapp"
+          ]
+        },
+        "baseImageFrom": {
+          "$id": "#/properties/baseImageFrom",
+          "type": "string",
+          "title": "The base dockerimage in the selfrunning jar case",
+          "examples": [
+            "docker.bin.sbb.ch/esta/sbb-base-rhel-java:11-03"
+          ]
+        },
+        "ocBuildVars": {
+          "$id": "#/properties/ocBuildVars",
+          "type": "string",
+          "title": "Setup in your own ImageBuild variables in the Key Value Format. It creates ENV Variables for the Dockerbuild which can be used in the Dockerbuild.",
+          "examples": [
+            "SNAPSHOTVERSION=1234,TIMESTAMP=121342323"
+          ]
+        }
+      }
+    },
+    "mvn": {
+      "type": "object",
+      "description": "Hier wird eine Konfigurationsstruktur pro Buildtyp angegeben:[parentPom: 'pom.xml',deployableArtifactsPom:'pom.xml', artifactoryMavenRepo: 'marthaler.mvn']",
+      "required": [
+        "parentPom",
+        "deployableArtifactsPom",
+        "artifactoryMavenRepo"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "parentPom": {
+          "description": "Pfad zum parent pom, default: pom.xml",
+          "type": "string",
+          "examples": [
+            "pom.xml"
+          ]
+        },
+        "deployableArtifactsPom": {
+          "description": "Pfad zum pom welches die deploybaren Artifakte angibt, default: pom.xml",
+          "type": "string",
+          "examples": [
+            "pom.xml"
+          ]
+        },
+        "artifactoryMavenRepo": {
+          "description": "Das Maven Repository in Artifactory in welches die Maven Artefakte publiziert werden sollen.",
+          "type": "string",
+          "examples": [
+            "marthaler.mvn"
+          ]
+        }
+      }
+    },
+    "npm": {
+      "type": "object",
+      "description": "Hier wird eine Konfigurationsstruktur pro Buildtyp angegeben:[targetRepo: 'kd_esta']",
+      "required": [
+        "targetRepo"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "targetRepo": {
+          "description": "Pfad zum Ziel",
+          "type": "string",
+          "examples": [
+            "kd_esta"
+          ]
+        },
+        "additionalNpmScripts": {
+          "description": "Npm Build Befehle. Kommagetrennt können mehrere Befehle angegeben werden.",
+          "type": "string",
+          "examples": [
+            "build, test"
+          ]
+        },
+        "installDependencies": {
+          "description": "will excecute npm ci in the background, default is true",
+          "type": "boolean",
+          "examples": [
+            "false"
+          ]
+        }
+      }
+    }
+  }
+}

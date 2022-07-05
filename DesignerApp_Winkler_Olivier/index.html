@@ -1,0 +1,139 @@
+<html>
+<head>
+  <title>DesignerApp</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!-- The charset attribute specifies the character-set for the HTML document. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!-- As default, IE renders all pages with IE8. This meta-tag forces all webpages to be displayed in edge mode. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <!-- The viewport meta-tag gives the browser instructions on how to control the page's dimensions and scaling. -->
+  <meta name="author" content="">
+  <meta name="description" content="--">
+  <!-- necessary for the SEO - Search eangines use this for the listing -->
+  <meta name="keywords" content="--">
+  <!-- unnecessary for the SEO -> sembyotic.com/stop-using-the-meta-keywords-tag/ -->
+  <meta name="theme-color" content="#HEXCODE">
+  <!-- defines a theme-color for the webpage -- for example: in google chrome on android - the browser head-bar will be in this color -->
+  <link rel="icon" type="../images/sbbicon.icon" href="images/sbbicon.ico"><!-- Icon in tab-->
+</head>
+<body>
+  <header>
+      <h1>News</h1>
+    <div class="header-filter-desktop">
+      <li class="header-filter-desktop-active">News</li>
+      <li>Community</li>
+      <li>Links</li>
+      <li>Feedback</li>
+    </div>
+  </header>
+
+
+  <p class="title-desktop">To be always up to date</p>
+  <div class="filter-desktop">
+  <p class="filter-text">Filter by:</p>
+      <div class="button-group">
+        <button class="button-secondary button-secondary-active">All</button>
+        <button class="button-secondary">UX & UI</button>
+        <button class="button-secondary">Development</button>
+        <button class="button-secondary button-secondary-last">My Profile</button>
+      </div>
+  </div>
+
+
+  <main>
+    <section class="card-container">
+      <div class="card-layout card-big">
+        <div class="picture-top">
+          <div class="icons">
+            <i class="icon-050-daumen-hoch-052"></i><span>13</span>
+            <i class="icon-050-share-025"></i><span>10</span>
+            <i class="icon-050-sprechblase-050"></i><span class="last-item">6</span>
+          </div><!--END .card-top-->
+        </div>
+        <div class="section-text">
+          <div class="textbox-head">
+            <p>UX & UI</p>
+            <p>04.04.2018</p>
+          </div>
+          <h2>The State of UX for 2018</h2><hr>
+          <p>
+            When 2017 is almost over it`s time to look ahead and predict how the
+            digital experience will evolve over the next 12 months.
+          </p>
+        </div>
+      </div><!--END .card-top-big-->
+
+
+      <div class="card-formular card-layout card-small">
+          <p>Survey</p>
+          <h2>Would you recommend this app?</h2><hr>
+        <label class="input-radio">Yes, download it now
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="input-radio">Why not?
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="input-radio">No, it´s time wasting
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+            <label for="name-input">Name</label>
+            <input id="name-input" class="name-input" type="text">
+          <button class="button-primary">Send</button>
+      </div><!---END .survey-chard-small-->
+
+
+      <div class="card-layout card-small">
+        <div class="picture-middle">
+          <div class="icons">
+            <i class="icon-050-daumen-hoch-052"></i><span>120</span>
+            <i class="icon-050-share-025"></i><span>60</span>
+            <i class="icon-050-sprechblase-050"></i><span class="last-item">20</span>
+          </div>
+        </div><!---END .picture-middle-->
+        <div class="section-text">
+          <div class="textbox-head">
+            <p>Development</p>
+            <p>02.01.2018</p>
+          </div>
+          <h2>Popular Web Animation Techniques</h2><hr>
+          <p>
+            Functional and delightful, animation is one of the staples of modern web design.
+          </p>
+        </div>
+      </div><!--END .card-middle-->
+
+      <div class="card-layout card-big">
+        <div class="picture-bottom">
+          <div class="icons">
+            <i class="icon-050-daumen-hoch-052"></i><span>82</span>
+            <i class="icon-050-share-025"></i><span>72</span>
+            <i class="icon-050-sprechblase-050"></i><span class="last-item">4</span>
+          </div>
+        </div><!--END .pciture-bottom-->
+        <div class="section-text">
+            <div class="textbox-head">
+              <h3>UX & UI</h3>
+              <h3>07.09.2017</h3>
+            </div>
+            <h2>6 storytelling principles to improve your UX</h2><hr>
+          <p>
+              Be clear and understand the higher purpose of why you are doing
+              what you are doing. What do you, your product, your service or your brand stand for?
+            </p>
+          </div>
+      </div><!--END .card-bottom-big-->
+    </section>
+</main>
+  <nav>
+        <a href="" class="active-button">News<i class="icon-010-news-175 active-button"></i></a>
+        <a href="">Community<i class="icon-060-user-3-gruppe-057"></i></a>
+        <a href="">Links<i class="icon-010-link-152"></i></a>
+        <a href="">Feedback<i class="icon-010-geschenk-033"></i></a>
+  </nav>
+  <script src="script/index.js"></script>
+</body>
+
+</html>
