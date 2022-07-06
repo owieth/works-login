@@ -1,2 +1,0 @@
-android.app.Application
-TestProjekt2.x_0.TestProjekt2.x_0
